@@ -1,7 +1,15 @@
 const mongoose = require('mongoose');
+// const express = require('express');
+// const app = express();
+// const server = require('http').createServer(app);
 const Msg = require('./models/messages');
-const io = require('socket.io')(3000)
+const PORT = process.env.PORT || 3300;
+const io = require('socket.io')(PORT)
 const mongoDB = 'mongodb+srv://WV:yeOrjqrs6vPEGufk@cluster0.zvuasbs.mongodb.net/WVChat?retryWrites=true&w=majority'
+
+// server.listen(PORT, () => {
+//     console.log('Server listening at port %d', PORT);
+//   });
 
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
     console.log('Connected to DB')
