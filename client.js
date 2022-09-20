@@ -1,5 +1,5 @@
-// const socket = io('https://wv-chat.herokuapp.com');
-const socket = io('http://localhost:3300');
+const socket = io('https://wv-chat.herokuapp.com');
+// const socket = io('http://localhost:3300');
 const messages = document.getElementById('messages');
 const msgForm = document.getElementById('msgForm');
 const nmForm = document.getElementById('nmForm');
