@@ -26,7 +26,8 @@ io.on('connection', (socket) => {
         console.log('user disconnected');
     });
     socket.on('chatmessage', data => {
-        const Message = new Msg({ name: data[0], message: data[1] });
+        var dt = new Date(data[2]);
+        const Message = new Msg({ name: data[0], message: data[1], time:dt });
         
         Message.save().then(() => {
             io.emit('message', data)
