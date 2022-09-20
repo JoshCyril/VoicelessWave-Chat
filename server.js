@@ -5,7 +5,8 @@ const mongoose = require('mongoose');
 const Msg = require('./models/messages');
 const PORT = process.env.PORT || 3300;
 const io = require('socket.io')(PORT)
-const mongoDB = 'mongodb+srv://WV:yeOrjqrs6vPEGufk@cluster0.zvuasbs.mongodb.net/WVChat?retryWrites=true&w=majority'
+require('dotenv').config()
+const mongoDB = process.env.MONGODB_URI //'mongodb+srv://WV:yeOrjqrs6vPEGufk@cluster0.zvuasbs.mongodb.net/WVChat?retryWrites=true&w=majority'
 
 // server.listen(PORT, () => {
 //     console.log('Server listening at port %d', PORT);
