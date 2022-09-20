@@ -1,4 +1,4 @@
-const socket = io('https://wv-chat.herokuapp.com/');
+const socket = io('https://wv-chat.herokuapp.com');
 const messages = document.getElementById('messages');
 const msgForm = document.getElementById('msgForm');
 
