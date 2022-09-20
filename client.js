@@ -9,7 +9,7 @@ socket.on('message', mesg => {
     appendMessages("New", mesg[0], mesg[1])
 })
 socket.on('output-messages', data => {
-    console.log(data)
+    // console.log(data)
     if (data.length) {
         data.forEach(mesg => {
             var d = new Date(mesg.time);
